@@ -1,0 +1,27 @@
+@import "./variables.scss";
+.contact-form {
+  background: $iMessageGrey;
+  .content-block {
+    max-width: 100%;
+  }
+  .form {
+    width: 60%;
+    margin: 0 auto;
+    input {
+      border: 0;
+      box-shadow: none;
+    }
+    textarea {
+      box-shadow: none;
+      border: 0;
+    }
+    .errors {
+      padding: 10px;
+      .error {
+        color: $danger;
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+}

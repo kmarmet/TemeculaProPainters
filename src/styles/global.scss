@@ -1,0 +1,174 @@
+p {
+  color: $lightBlack;
+}
+html,
+body {
+  overflow: auto;
+  min-height: 100;
+}
+
+html {
+  height: auto;
+  min-height: 100%;
+}
+
+button {
+  background: white;
+  border-radius: $borderRadius;
+  padding: 10px 20px;
+  border: 0;
+  font-size: 14px;
+  color: $iMessageBlue;
+  transition: $transition;
+  text-transform: uppercase;
+  font-weight: bold;
+  a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $iMessageBlue;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    a {
+      color: $iMessageBlue;
+    }
+  }
+  &.blue {
+    background: $iMessageBlue;
+    a {
+      color: white;
+    }
+    &:hover {
+      a {
+        color: white;
+      }
+    }
+  }
+  &.grey {
+    background: $iMessageGrey;
+    text-transform: uppercase;
+    a {
+      color: $lightBlack;
+    }
+  }
+  &.centered {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+* {
+  font-family: "Helvetica Neue", Helvetica;
+  &::-webkit-scrollbar {
+    width: 20px;
+    transition: $transition;
+    background: $bootstrapGrey;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $bootstrapGrey;
+    border-radius: 10px;
+    transition: $transition;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $iMessageBlue;
+    border-radius: 10px;
+    transition: $transition;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $iMessageBlue;
+    cursor: pointer;
+    transition: $transition;
+  }
+  @include SmallScrollbar;
+}
+
+// Common Page
+.page {
+  section {
+    padding: 100px 20px;
+
+    .content-block {
+      text-align: center;
+      max-width: 1200px;
+      margin: 20px auto;
+      h2 {
+        color: $iMessageBlue;
+        border-bottom: 2px solid $iMessageBlue;
+        width: 300px;
+        margin: 0 auto;
+        i {
+          font-size: 28px;
+          position: relative;
+          top: -3px;
+        }
+      }
+    }
+  }
+}
+
+.subpage {
+  height: 100vh;
+  section {
+    padding: 50px 20px;
+  }
+  
+  .hero {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1 {
+      color: white;
+      font-size: 80px;
+    }
+  }
+  &.contact {
+    background: $iMessageGrey;
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/contact/hero.jpg");
+    }
+
+    .form {
+      .title {
+        display: none;
+      }
+    }
+  }
+}
+
+.gallery {
+  .slider-parent {
+    .arrow {
+      font-size: 40px;
+      opacity: 0.3;
+      transition: $transition;
+      position: relative;
+      top: 10px;
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+        color: $iMessageBlue;
+      }
+    }
+    .slick-slide {
+      div {
+        margin: 0 5px;
+        img {
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
