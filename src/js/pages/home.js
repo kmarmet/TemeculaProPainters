@@ -1,7 +1,7 @@
 import React from "react"
 import { withRouter } from 'react-router';
 import { Link } from "react-router-dom";
-import Gallery from "../../js/shared/gallery"
+import ImageSlider from "../../js/shared/slider"
 import Spacer from "../shared/spacer"
 import ContactForm from "../shared/contactForm";
 import AnimationWrapper from "../shared/animationWrapper";
@@ -16,7 +16,7 @@ const Home = withRouter(({ history, location }) => {
             <section className="hero">
                 <AnimationWrapper>
                     <div className="text animate__animated animate__fadeInUp">
-                        <h1>YOUR SLOGAN HERE</h1>
+                        <h1>Temecula Pro Painters <i className="fas fa-brush"></i></h1>
                         <Spacer />
                         <div className="cta-buttons">
                             <button className="blue call">
@@ -101,7 +101,7 @@ const Home = withRouter(({ history, location }) => {
                 <AnimationWrapper>
                     <div className="content-block animate__animated animate__fadeInUp">
                         <h2 className="title is-2 mb-5">Gallery <i className="fas fa-images"></i></h2>
-                        <Gallery />
+                        <ImageSlider />
                     </div>
                 </AnimationWrapper>
             </section>

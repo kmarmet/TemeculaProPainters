@@ -20,10 +20,17 @@
         .text {
           h1 {
             color: white;
-            font-size: 50px;
+            font-size: 100px;
             text-align: center;
-            text-shadow: rgb(0, 0, 0) 2px 2px 8px;
-            font-weight: bold;
+
+            font-family: $brandNameFont;
+            @include TextGradient;
+            i {
+              color: $iMessageBlue;
+              font-size: 50px;
+              transform: rotate(40deg);
+              @include TextGradient;
+            }
           }
           .cta-buttons {
             text-align: center;

@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from "./js/pages/home"
 import Contact from "./js/pages/contact";
+import Gallery from "./js/pages/gallery";
 
 // Styles 
 import "../src/styles/bundle.scss"
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route exact path="/contact">
           <Contact />
+        </Route>
+        <Route exact path="/gallery">
+          <Gallery />
         </Route>
       </Switch>
     </Layout>

@@ -8,15 +8,16 @@ const Nav = withRouter(({ history, location }) => {
         <nav className="nav">
             <div className="bg"></div>
             <div className="column left">
-                <a href="#">Temecula Pro Painters</a>
+                <Link className={`${pathname === "/" ? "active brand-name" : "brand-name"}`} to="/">Temecula Pro Painters <i className="fas fa-brush"></i></Link>
+                <a href="tel:0000000000" className="call-cta blue">Call Now <i className="fas fa-phone"></i></a>
             </div>
             <div className="column right">
                 <ul>
-                    <Link className={`${pathname === "/" ? "active" : ""}`} to="/">Home</Link>
-                    <Link className={`${pathname === "/about" ? "active" : ""}`} to="/about">About</Link>
-                    <Link className={`${pathname === "/services" ? "active" : ""}`} to="/services">Services</Link>
-                    <Link className={`${pathname === "/gallery" ? "active" : ""}`} to="/gallery">Gallery</Link>
-                    <Link className={`${pathname === "/contact" ? "active" : ""}`} to="/contact">Contact</Link>
+                    <li><Link className={`${pathname === "/" ? "active" : ""}`} to="/">Home</Link></li>
+                    <li> <Link className={`${pathname === "/about" ? "active" : ""}`} to="/about">About</Link></li>
+                    <li> <Link className={`${pathname === "/services" ? "active" : ""}`} to="/services">Services</Link></li>
+                    <li> <Link className={`${pathname === "/gallery" ? "active" : ""}`} to="/gallery">Gallery</Link></li>
+                    <li><Link className={`${pathname === "/contact" ? "active" : ""}`} to="/contact">Contact</Link></li>
                 </ul>
             </div>
         </nav >

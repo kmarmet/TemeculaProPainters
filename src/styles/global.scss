@@ -60,23 +60,24 @@ button {
 
 * {
   font-family: "Helvetica Neue", Helvetica;
+  @include SmallScrollbar;
   &::-webkit-scrollbar {
-    width: 20px;
+    width: 15px;
     transition: $transition;
-    background: $bootstrapGrey;
+    background: $iMessageBlue;
   }
 
   /* Track */
   &::-webkit-scrollbar-track {
     background: $bootstrapGrey;
-    border-radius: 10px;
+    border-radius: 0;
     transition: $transition;
   }
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
     background: $iMessageBlue;
-    border-radius: 10px;
+    border-radius: 0;
     transition: $transition;
   }
 
@@ -86,7 +87,6 @@ button {
     cursor: pointer;
     transition: $transition;
   }
-  @include SmallScrollbar;
 }
 
 // Common Page
@@ -118,7 +118,7 @@ button {
   section {
     padding: 50px 20px;
   }
-  
+
   .hero {
     height: 50vh;
     width: 100%;
@@ -130,7 +130,9 @@ button {
     background-repeat: no-repeat;
     h1 {
       color: white;
-      font-size: 80px;
+      font-size: 100px;
+      font-family: $brandNameFont;
+      text-shadow: rgb(0, 0, 0) 2px 2px 8px;
     }
   }
   &.contact {
@@ -146,10 +148,21 @@ button {
       }
     }
   }
+  &.gallery {
+    background: $iMessageGrey;
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/gallery/hero.jpg");
+    }
+  }
 }
 
 .gallery {
   .slider-parent {
+    .slick-slider {
+      max-height: 500px;
+      overflow: hidden;
+    }
     .arrow {
       font-size: 40px;
       opacity: 0.3;

@@ -1,19 +1,23 @@
 import React, { Fragment, useRef } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import BrushImage from "../../img/gallery/brushes.jpg"
-import BrushImage2 from "../../img/gallery/brushes-2.jpg"
-import YellowWall from "../../img/gallery/yellow-wall.jpg"
+import one from "../../img/gallery/before-and-after/1.jpg"
+import two from "../../img/gallery/before-and-after/2.jpg"
+import three from "../../img/gallery/before-and-after/3.jpg"
+import four from "../../img/gallery/before-and-after/4.jpg"
+import five from "../../img/gallery/before-and-after/5.jpg"
+import six from "../../img/gallery/before-and-after/6.jpg"
+
 import "../../styles/bundle.scss"
-export default function Gallery() {
+export default function ImageSlider() {
     var settings = {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        arrows: false
+        arrows: false,
     };
     const sliderRef = useRef();
     const Next = () => {
@@ -25,14 +29,17 @@ export default function Gallery() {
     return (
         <div className="slider-parent">
             <Slider {...settings} ref={sliderRef}>
-                <img src={BrushImage} alt="Brushes" />
-                <img src={YellowWall} alt="Yellow Wall" />
-                <img src={BrushImage2} alt="Brushes" />
-                <img src={YellowWall} alt="Yellow Wall" />
+                <img src={one} alt="One" />
+                <img src={two} alt="Two" />
+                <img src={three} alt="Three" />
+                <img src={four} alt="Four" />
+                <img src={five} alt="Five" />
+                <img src={six} alt="Six" />
+
             </Slider>
             <i className="fas arrow fa-chevron-left left" onClick={Back}></i>
             <button className="grey">
-                <Link to="/about">view full gallery</Link>
+                <Link to="/gallery">view full gallery</Link>
             </button>
             <i className="fas arrow fa-chevron-right right" onClick={Next}></i>
         </div>
