@@ -24,6 +24,10 @@ import beforeAfterImage_Six from "../../img/gallery/before-and-after/6.jpg"
 import beforeAfterImage_Seven from "../../img/gallery/before-and-after/7.jpg"
 import beforeAfterImage_Eight from "../../img/gallery/before-and-after/8.jpg"
 import beforeAfterImage_Nine from "../../img/gallery/before-and-after/9.jpg"
+import beforeAfterImage_Ten from "../../img/gallery/before-and-after/10.jpg"
+import beforeAfterImage_Eleven from "../../img/gallery/before-and-after/11.jpg"
+import beforeAfterImage_Twelve from "../../img/gallery/before-and-after/12.jpg"
+import beforeAfterImage_Thirteen from "../../img/gallery/before-and-after/13.jpg"
 
 
 const Gallery = withRouter(({ history, location }) => {
@@ -53,6 +57,10 @@ const Gallery = withRouter(({ history, location }) => {
                                 <img src={beforeAfterImage_Seven} />
                                 <img src={beforeAfterImage_Eight} />
                                 <img src={beforeAfterImage_Nine} />
+                                <img src={beforeAfterImage_Ten} />
+                                <img src={beforeAfterImage_Eleven} />
+                                <img src={beforeAfterImage_Twelve} />
+                                <img src={beforeAfterImage_Thirteen} />
                             </div>
                         </SRLWrapper>
                     </AnimationWrapper>

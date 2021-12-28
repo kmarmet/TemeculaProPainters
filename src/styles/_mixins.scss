@@ -26,3 +26,27 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@mixin BlueHeader {
+  color: $iMessageBlue;
+  border-bottom: 2px solid $iMessageBlue;
+  width: 300px;
+  margin: 0 auto;
+  font-family: $brandNameFont;
+  font-weight: 100;
+  font-size: 60px;
+  i {
+    font-size: 35px;
+    position: relative;
+    top: -3px;
+  }
+}
+
+@mixin TextShadow {
+  text-shadow: rgb(0, 0, 0) 2px 2px 8px;
+}
+
+@mixin DarkenedImage($url) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url($url);
+}

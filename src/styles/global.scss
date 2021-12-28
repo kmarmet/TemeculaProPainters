@@ -12,6 +12,7 @@ html {
   min-height: 100%;
 }
 
+// Button
 button {
   background: white;
   border-radius: $borderRadius;
@@ -93,26 +94,18 @@ button {
 .page {
   section {
     padding: 100px 20px;
-
     .content-block {
       text-align: center;
       max-width: 1200px;
       margin: 20px auto;
       h2 {
-        color: $iMessageBlue;
-        border-bottom: 2px solid $iMessageBlue;
-        width: 300px;
-        margin: 0 auto;
-        i {
-          font-size: 28px;
-          position: relative;
-          top: -3px;
-        }
+        @include BlueHeader;
       }
     }
   }
 }
 
+// Subpage
 .subpage {
   height: 100vh;
   section {
@@ -132,14 +125,13 @@ button {
       color: white;
       font-size: 100px;
       font-family: $brandNameFont;
-      text-shadow: rgb(0, 0, 0) 2px 2px 8px;
+      @include TextShadow;
     }
   }
   &.contact {
     background: $iMessageGrey;
     .hero {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/contact/hero.jpg");
+      @include DarkenedImage("../img/contact/hero.jpg");
     }
 
     .form {
@@ -151,18 +143,14 @@ button {
   &.gallery {
     background: $iMessageGrey;
     .hero {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/gallery/hero.jpg");
+      @include DarkenedImage("../img/gallery/hero.jpg");
     }
   }
 }
 
-.gallery {
+// Image Slider
+.image-slider {
   .slider-parent {
-    .slick-slider {
-      max-height: 500px;
-      overflow: hidden;
-    }
     .arrow {
       font-size: 40px;
       opacity: 0.3;
@@ -179,9 +167,14 @@ button {
       div {
         margin: 0 5px;
         img {
-          border-radius: 5px;
+          border-radius: $borderRadius;
         }
       }
     }
   }
+}
+
+// Utility Classes
+.text-shadow {
+  @include TextShadow;
 }

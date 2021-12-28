@@ -9,7 +9,7 @@ const Nav = withRouter(({ history, location }) => {
             <div className="bg"></div>
             <div className="column left">
                 <Link className={`${pathname === "/" ? "active brand-name" : "brand-name"}`} to="/">Temecula Pro Painters <i className="fas fa-brush"></i></Link>
-                <a href="tel:0000000000" className="call-cta blue">Call Now <i className="fas fa-phone"></i></a>
+
             </div>
             <div className="column right">
                 <ul>
@@ -18,6 +18,7 @@ const Nav = withRouter(({ history, location }) => {
                     <li> <Link className={`${pathname === "/services" ? "active" : ""}`} to="/services">Services</Link></li>
                     <li> <Link className={`${pathname === "/gallery" ? "active" : ""}`} to="/gallery">Gallery</Link></li>
                     <li><Link className={`${pathname === "/contact" ? "active" : ""}`} to="/contact">Contact</Link></li>
+                    <li>  <a href="tel:0000000000" className="call-cta blue">Call <i className="fas fa-phone"></i></a></li>
                 </ul>
             </div>
         </nav >

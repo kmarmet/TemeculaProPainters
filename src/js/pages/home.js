@@ -8,6 +8,8 @@ import AnimationWrapper from "../shared/animationWrapper";
 import "../../styles/bundle.scss"
 import "../../styles/pages/_home.scss"
 
+import EstimateImage from "../../img/brushes.jpg"
+
 const Home = withRouter(({ history, location }) => {
     const { pathname } = location;
 
@@ -44,10 +46,13 @@ const Home = withRouter(({ history, location }) => {
             </section>
             <section className="with-bg transforming">
                 <AnimationWrapper>
+
                     <div className="text">
-                        <p className="title is-3">Transforming homes</p>
-                        <p className="title is-3">one room at a time</p>
+                        <p className="title is-3 text-shadow">Transforming homes</p>
+                        <p className="title is-3 text-shadow">one room at a time</p>
                     </div>
+
+
                 </AnimationWrapper>
             </section>
             <section className="services">
@@ -83,8 +88,11 @@ const Home = withRouter(({ history, location }) => {
                         <div className="card animate__animated animate__bounce">
                             <div className="columns">
                                 <div className="column left is-two-thirds">
-                                    <h4 className="title is-4 mb-2">Schedule an Estimate</h4>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, repellat.</p>
+                                    <img src={EstimateImage} alt="Schedule an Estimate" />
+                                    <div className="text">
+                                        <h4 className="title is-4 mb-2">Schedule an Estimate</h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, repellat.</p>
+                                    </div>
                                 </div>
                                 <div className="column right">
                                     <button className="blue call">
@@ -97,7 +105,7 @@ const Home = withRouter(({ history, location }) => {
                 </AnimationWrapper>
             </section>
             {/* GALLERY */}
-            <section className="gallery">
+            <section className="image-slider">
                 <AnimationWrapper>
                     <div className="content-block animate__animated animate__fadeInUp">
                         <h2 className="title is-2 mb-5">Gallery <i className="fas fa-images"></i></h2>

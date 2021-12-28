@@ -8,15 +8,24 @@
     width: 60%;
     margin: 0 auto;
     input {
-      border: 0;
       box-shadow: none;
+      padding: 30px 20px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #dbdbdb;
     }
     textarea {
       box-shadow: none;
-      border: 0;
+      border: 1px solid #dbdbdb;
+    }
+    button {
+      color: $lightBlack;
     }
     .errors {
       padding: 10px;
+      background-color: $dangerLight;
+      border-radius: $borderRadius;
+      border: 1px solid #dbdbdb;
       .error {
         color: $danger;
         margin: 0;

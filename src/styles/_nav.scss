@@ -40,9 +40,9 @@ nav {
       width: 100%;
       position: absolute;
       top: -80px;
-      background-color: rgba(240, 240, 240, 0.9);
+      background-color: rgba(240, 240, 240, 0.95);
       opacity: 0;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
       z-index: 0;
     }
     .column {
@@ -64,19 +64,11 @@ nav {
             font-weight: 100;
             i {
               color: $iMessageBlue;
-           
+
               font-size: 20px;
 
               transform: rotate(40deg);
             }
-          }
-          &.call-cta {
-            background-color: $iMessageBlue;
-            padding: 2px 10px;
-            color: $iMessageGrey;
-            font-size: 14px;
-            margin: 0 0 0 20px;
-            border-radius: $borderRadius;
           }
         }
       }
@@ -89,7 +81,7 @@ nav {
           margin: 0;
           padding: 0 20px 0 0;
           a {
-            margin: 0 10px;
+            margin: 0 8px;
             color: white;
             transition: $transition;
             position: relative;
@@ -100,8 +92,27 @@ nav {
             &:hover {
               i {
                 top: -55%;
-                // transform: translate(-50%, -50%);
                 opacity: 1;
+              }
+            }
+            &.call-cta {
+              background-color: $iMessageBlue;
+              padding: 5px 10px;
+              color: $iMessageGrey;
+              font-size: 14px;
+              margin: 0 0 0 20px;
+              border-radius: $borderRadius;
+              opacity: 1;
+              i {
+                opacity: 1;
+                transform: none;
+                left: auto;
+                top: auto;
+                position: relative;
+                margin: 0 0 0 5px;
+                &:hover {
+                  @include BiggestBoxShadow;
+                }
               }
             }
             i {
