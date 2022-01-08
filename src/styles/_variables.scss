@@ -3,6 +3,8 @@ $transition: all 0.3s ease-in-out;
 $borderRadius: 0.3rem;
 
 // colors
+$iMessageBlue: #1885ff;
+$iMessageGrey: #e9e8eb;
 $lightBlack: #505050;
 $darkPurple: #745acd;
 $darkerPurple: #5739af;
@@ -17,21 +19,10 @@ $lightestGrey: #f8f8f8;
 $green: #39c16c;
 $gradient: linear-gradient(
   120deg,
-  #1f005c,
-  #27066b,
-  #2f0e7a,
-  #391788,
-  #432397,
-  #4f30a6,
-  #5c3eb5,
-  #6a4fc4,
-  #7a61d3,
-  #8b74e1,
-  #9e8af0,
-  #b2a1ff
+  $iMessageBlue,
+  white,
+
 );
-$iMessageBlue: #1885ff;
-$iMessageGrey: #e9e8eb;
 
 // media
 $tablet: 768px;

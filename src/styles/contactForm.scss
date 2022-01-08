@@ -1,8 +1,12 @@
-@import "./variables.scss";
+// Styles
+@import "../styles/bundle.scss";
 .contact-form {
   background: $iMessageGrey;
   .content-block {
     max-width: 100%;
+    .title {
+      @include BlueHeader;
+    }
   }
   .form {
     width: 60%;

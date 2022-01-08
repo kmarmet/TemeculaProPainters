@@ -1,0 +1,31 @@
+@import "../bundle.scss";
+.subpage {
+  &.about {
+    .about-text {
+      p {
+        text-align: left;
+      }
+    }
+
+    .service-area {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../img/about/map.jpg");
+      height: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      h2 {
+        color: white;
+      }
+      ul {
+        li {
+          text-align: left;
+          color: white;
+        }
+      }
+    }
+  }
+}

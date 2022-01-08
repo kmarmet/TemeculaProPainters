@@ -1,7 +1,8 @@
 
 import React, { Fragment, useState } from "react"
 import AnimationWrapper from "./animationWrapper";
-import contactForm from "../../styles/contactForm.scss"
+import "../../styles/contactForm.scss"
+
 const ContactForm = () => {
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");

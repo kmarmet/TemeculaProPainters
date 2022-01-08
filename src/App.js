@@ -8,9 +8,8 @@ import {
 import Home from "./js/pages/home"
 import Contact from "./js/pages/contact";
 import Gallery from "./js/pages/gallery";
-
-// Styles 
-import "../src/styles/bundle.scss"
+import ServicesPage from "./js/pages/services";
+import About from "./js/pages/about";
 
 function App() {
   return (
@@ -24,6 +23,12 @@ function App() {
         </Route>
         <Route exact path="/gallery">
           <Gallery />
+        </Route>
+        <Route exact path="/services">
+          <ServicesPage />
+        </Route>
+        <Route exact path="/about">
+          <About />
         </Route>
       </Switch>
     </Layout>

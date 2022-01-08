@@ -1,0 +1,40 @@
+@import "../bundle.scss";
+.subpage {
+  &.services {
+    section {
+      &.service {
+        padding: 100px 20px;
+        &.pressure-washing {
+          background-color: $iMessageBlue;
+
+          p,
+          h2 {
+            color: white;
+          }
+          button {
+            color: $iMessageBlue;
+          }
+          img {
+            border: 3px solid white;
+          }
+        }
+        img {
+          border-radius: $borderRadius;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+            0 3px 6px rgba(0, 0, 0, 0.23);
+          height: auto;
+          border: 3px solid $iMessageGrey;
+        }
+        h2,
+        p,
+        button {
+          text-align: left;
+        }
+        button {
+          display: block;
+          margin: auto auto 0 0;
+        }
+      }
+    }
+  }
+}

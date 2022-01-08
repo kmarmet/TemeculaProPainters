@@ -5,7 +5,6 @@ import Subpage from "../shared/subpage";
 import AnimationWrapper from "../shared/animationWrapper";
 import { SRLWrapper } from "simple-react-lightbox";
 import ContactForm from "../shared/contactForm";
-import "../../styles/bundle.scss"
 import "../../styles/pages/_gallery.scss"
 
 // Standard Images 
@@ -48,19 +47,19 @@ const Gallery = withRouter(({ history, location }) => {
                             </div>
                             <h2>Before & After Images</h2>
                             <div className="thumbnail-images">
-                                <img src={beforeAfterImage_One} />
-                                <img src={beforeAfterImage_Two} />
-                                <img src={beforeAfterImage_Three} />
-                                <img src={beforeAfterImage_Four} />
-                                <img src={beforeAfterImage_Five} />
-                                <img src={beforeAfterImage_Six} />
-                                <img src={beforeAfterImage_Seven} />
-                                <img src={beforeAfterImage_Eight} />
-                                <img src={beforeAfterImage_Nine} />
-                                <img src={beforeAfterImage_Ten} />
-                                <img src={beforeAfterImage_Eleven} />
-                                <img src={beforeAfterImage_Twelve} />
-                                <img src={beforeAfterImage_Thirteen} />
+                                <img src={beforeAfterImage_One} alt="One" />
+                                <img src={beforeAfterImage_Two} alt="Two" />
+                                <img src={beforeAfterImage_Three} alt="Three" />
+                                <img src={beforeAfterImage_Four} alt="One" />
+                                <img src={beforeAfterImage_Five} alt="One" />
+                                <img src={beforeAfterImage_Six} alt="One" />
+                                <img src={beforeAfterImage_Seven} alt="One" />
+                                <img src={beforeAfterImage_Eight} alt="One" />
+                                <img src={beforeAfterImage_Nine} alt="One" />
+                                <img src={beforeAfterImage_Ten} alt="One" />
+                                <img src={beforeAfterImage_Eleven} alt="One" />
+                                <img src={beforeAfterImage_Twelve} alt="One" />
+                                <img src={beforeAfterImage_Thirteen} alt="One" />
                             </div>
                         </SRLWrapper>
                     </AnimationWrapper>

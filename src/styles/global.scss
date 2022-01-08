@@ -12,6 +12,14 @@ html {
   min-height: 100%;
 }
 
+img {
+  border-radius: $borderRadius;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+  height: auto;
+  border: 3px solid $iMessageGrey;
+}
+
 // Button
 button {
   background: white;
@@ -37,10 +45,12 @@ button {
   }
   &.blue {
     background: $iMessageBlue;
+    color: white;
     a {
       color: white;
     }
     &:hover {
+      color: white;
       a {
         color: white;
       }
@@ -107,9 +117,14 @@ button {
 
 // Subpage
 .subpage {
-  height: 100vh;
+  height: 100%;
   section {
     padding: 50px 20px;
+    .content-block {
+      text-align: center;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
   }
 
   .hero {
@@ -144,6 +159,16 @@ button {
     background: $iMessageGrey;
     .hero {
       @include DarkenedImage("../img/gallery/hero.jpg");
+    }
+  }
+  &.services {
+    .hero {
+      @include DarkenedImage("../img/services/hero.jpg");
+    }
+  }
+  &.about {
+    .hero {
+      @include DarkenedImage("../img/about/hero.jpg");
     }
   }
 }
