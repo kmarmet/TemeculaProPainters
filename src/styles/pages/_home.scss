@@ -24,6 +24,15 @@
 
             font-family: $brandNameFont;
             @include TextGradient;
+            @media (max-width: 768px) {
+              line-height: 1.2;
+            }
+            @media (max-width: 600px) {
+              font-size: 60px;
+              i {
+                font-size: 25px;
+              }
+            }
             i {
               color: $iMessageBlue;
               font-size: 50px;
@@ -33,8 +42,18 @@
           }
           .cta-buttons {
             text-align: center;
+            @media (max-width: 600px) {
+              display: block;
+              button {
+                width: 100%;
+                margin: 0 0 10px 0;
+              }
+            }
             .call {
               margin: 0 10px 0 0;
+              @media (max-width: 600px) {
+                  margin: 0 0 10px 0;
+              }
             }
           }
         }
@@ -78,6 +97,9 @@
           padding: 20px;
           width: 650px;
           border-top: 6px solid $iMessageBlue;
+          @media (max-width: 600px) {
+              width: 100%;
+          }
           h4,
           p {
             text-align: left;
@@ -87,11 +109,17 @@
               &.left {
                 display: flex;
                 width: 70%;
+                @media (max-width: 768px) {
+                  width: 100%;
+                }
                 img {
                   height: 150px;
                   border-radius: $borderRadius;
                   margin: 0 20px 0 0;
                   width: auto;
+                  @media (max-width: 600px) {
+                      display:none;
+                  }
                 }
               }
               &.right {
@@ -99,6 +127,9 @@
                 align-items: center;
                 button {
                   margin: 0 0 0 auto;
+                  @media (max-width: 768px) {
+                    margin: 0 auto;
+                  }
                 }
               }
             }

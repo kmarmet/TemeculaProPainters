@@ -63,7 +63,7 @@ const ContactForm = () => {
                             </div>
 
                             {/* EMAIL */}
-                            <div className="field mb-0 column">
+                            <div className="field mb-3 column">
                                 <div className="control ">
                                     <input className="input" type="email" placeholder="Email Address *" onChange={(e) => setEmail(e.target.value)} value={email} />
 

@@ -1,6 +1,24 @@
 p {
   color: $lightBlack;
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+  @media (max-width: 600px) {
+    font-size: 20px;
+    text-align: left;
+  }
 }
+
+button,
+a {
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
+}
+
 html,
 body {
   overflow: auto;
@@ -14,8 +32,7 @@ html {
 
 img {
   border-radius: $borderRadius;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
-    0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   height: auto;
   border: 3px solid $iMessageGrey;
 }
@@ -176,16 +193,21 @@ button {
 // Image Slider
 .image-slider {
   .slider-parent {
-    .arrow {
-      font-size: 40px;
-      opacity: 0.3;
-      transition: $transition;
-      position: relative;
-      top: 10px;
-      &:hover {
-        opacity: 1;
-        cursor: pointer;
-        color: $iMessageBlue;
+    .slider-nav {
+      display: flex;
+      margin: 20px auto;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      .arrow {
+        font-size: 40px;
+        opacity: 0.3;
+        transition: $transition;
+        &:hover {
+          opacity: 1;
+          cursor: pointer;
+          color: $iMessageBlue;
+        }
       }
     }
     .slick-slide {

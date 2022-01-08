@@ -44,11 +44,13 @@ export default function ImageSlider() {
                 <img src={nine} alt="nine" />
 
             </Slider>
-            <i className="fas arrow fa-chevron-left left" onClick={Back}></i>
-            <button className="grey ml-5 mr-5">
-                <Link to="/gallery">view full gallery</Link>
-            </button>
-            <i className="fas arrow fa-chevron-right right" onClick={Next}></i>
+            <div className="slider-nav">
+                <i className="fas arrow fa-chevron-left left" onClick={Back}></i>
+                <button className="grey ml-5 mr-5">
+                    <Link to="/gallery">view full gallery</Link>
+                </button>
+                <i className="fas arrow fa-chevron-right right" onClick={Next}></i>
+            </div>
         </div>
     );
 }
