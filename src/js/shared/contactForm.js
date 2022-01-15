@@ -1,6 +1,7 @@
 
 import React, { Fragment, useState } from "react"
 import AnimationWrapper from "./animationWrapper";
+import EmailJs from "../../Email";
 import "../../styles/contactForm.scss"
 
 const ContactForm = () => {
@@ -32,12 +33,22 @@ const ContactForm = () => {
         if (message === "" || message === null) _errors.push("A Message is Required")
 
         if (_errors.length === 0) {
+            SendEmail();
             setFullName("");
             setMessage("");
             setEmail("")
             setPhoneNumber("")
         }
         setErrors(_errors);
+    }
+
+    const SendEmail = () => {
+        EmailJs.sendEmail("CompanyEmail", "ContactForm", {
+            message: message,
+            from_name: fullName,
+            reply_to: email,
+            from_email: email
+        })
     }
 
     return (

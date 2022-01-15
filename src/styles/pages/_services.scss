@@ -4,7 +4,8 @@
     section {
       &.service {
         padding: 100px 20px;
-        &.pressure-washing {
+        &.pressure-washing,
+        &.cabinets {
           background-color: $iMessageBlue;
 
           p,

@@ -21,7 +21,7 @@
             color: white;
             font-size: 100px;
             text-align: center;
-
+            line-height: 1;
             font-family: $brandNameFont;
             @include TextGradient;
             @media (max-width: 768px) {
@@ -40,19 +40,30 @@
               @include TextGradient;
             }
           }
+          h3 {
+            width: 70%;
+            margin: 0 auto;
+            color: white;
+            opacity: 0.8;
+            text-align: center;
+            @media (max-width: 600px) {
+              width: 100%;
+            }
+          }
           .cta-buttons {
             text-align: center;
             @media (max-width: 600px) {
               display: block;
               button {
-                width: 100%;
-                margin: 0 0 10px 0;
+                width: 60%;
+                display: block;
+                margin: 0 auto 5px auto;
               }
             }
             .call {
               margin: 0 10px 0 0;
               @media (max-width: 600px) {
-                  margin: 0 0 10px 0;
+                margin: 0 auto 5px auto;
               }
             }
           }
@@ -98,11 +109,31 @@
           width: 650px;
           border-top: 6px solid $iMessageBlue;
           @media (max-width: 600px) {
-              width: 100%;
+            width: 100%;
           }
           h4,
           p {
             text-align: left;
+          }
+          .methods {
+            padding: 0 20px;
+            p {
+              font-weight: bold;
+              width: 100%;
+              text-align: center;
+            }
+            ul {
+              list-style: decimal-leading-zero;
+              padding: 0 0 0 20px;
+              width: 300px;
+              margin: 0 auto;
+              li {
+                text-align: center;
+                list-style-type: disc;
+                text-align: left;
+
+              }
+            }
           }
           .columns {
             .column {
@@ -118,7 +149,7 @@
                   margin: 0 20px 0 0;
                   width: auto;
                   @media (max-width: 600px) {
-                      display:none;
+                    display: none;
                   }
                 }
               }
@@ -142,7 +173,7 @@
         }
       }
       &.contact-form {
-        background: $iMessageGrey;
+        background: #f8f9fa;
         .content-block {
           max-width: 100%;
         }

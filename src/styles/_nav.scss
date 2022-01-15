@@ -64,6 +64,17 @@ nav {
         display: flex;
         padding: 0 0 0 20px;
         font-size: 25px;
+        width: 100%;
+        .hamburger-react {
+          display: none;
+          transition: none !important;
+          div {
+            transition: none !important;
+          }
+          @media (max-width: 768px) {
+            display: Block;
+          }
+        }
         @media (max-width: 768px) {
           width: 100%;
           .hamburger-react {
@@ -74,7 +85,7 @@ nav {
 
         a {
           color: white;
-          font-size: 22px;
+          font-size: 20px;
           &.brand-name {
             font-family: $brandNameFont;
             font-size: 30px;
@@ -83,7 +94,7 @@ nav {
               font-size: 36px;
             }
             @media (max-width: 600px) {
-                font-size: 32px;
+              font-size: 32px;
             }
             i {
               color: $iMessageBlue;
@@ -98,66 +109,71 @@ nav {
       &.right {
         display: flex;
         align-items: center;
-
+        width: 100%;
         ul {
           display: flex;
           justify-content: flex-end;
           height: 80px;
           align-items: center;
-          margin: 0;
+          margin: 0 0 0 auto;
           padding: 0 20px 0 0;
           @media (max-width: $tablet) {
             display: none;
           }
-          a {
-            margin: 0 8px;
-            color: white;
-            transition: $transition;
-            position: relative;
-            opacity: 0.5;
-            text-transform: capitalize;
-            font-weight: 100;
-            text-transform: uppercase;
-            &:hover {
-              i {
-                top: -55%;
-                opacity: 1;
-              }
+          li {
+            text-align: center;
+            &.call-cta-li {
+              min-width: 100px;
             }
-            &.call-cta {
-              background-color: $iMessageBlue;
-              padding: 5px 10px;
-              color: $iMessageGrey;
-              font-size: 14px;
-              margin: 0 0 0 20px;
-              border-radius: $borderRadius;
-              opacity: 1;
-              i {
-                opacity: 1;
-                transform: none;
-                left: auto;
-                top: auto;
-                position: relative;
-                margin: 0 0 0 5px;
-                &:hover {
-                  @include BiggestBoxShadow;
+            a {
+              margin: 0 8px;
+              color: white;
+              transition: $transition;
+              position: relative;
+              opacity: 0.5;
+              text-transform: capitalize;
+              text-transform: uppercase;
+              &:hover {
+                i {
+                  top: -55%;
+                  opacity: 1;
                 }
               }
-            }
-            i {
-              transform: translateX(-50%);
-              position: absolute;
-              left: 50%;
-              top: 100%;
-              transition: $transition;
-              opacity: 0;
-            }
-            &:hover {
-              cursor: pointer;
-              opacity: 1;
-            }
-            &.active {
-              opacity: 1;
+              &.call-cta {
+                background-color: $iMessageBlue;
+                padding: 5px 10px;
+                color: $iMessageGrey;
+                font-size: 14px;
+                border-radius: $borderRadius;
+                opacity: 1;
+                margin: 0 auto;
+                i {
+                  opacity: 1;
+                  transform: none;
+                  left: auto;
+                  top: auto;
+                  position: relative;
+                  margin: 0 0 0 5px;
+                  &:hover {
+                    @include BiggestBoxShadow;
+                  }
+                }
+              }
+              i {
+                transform: translateX(-50%);
+                position: absolute;
+                left: 50%;
+                top: 100%;
+                transition: $transition;
+                opacity: 0;
+              }
+              &:hover {
+                cursor: pointer;
+                opacity: 1;
+              }
+              &.active {
+                opacity: 1;
+              }
             }
           }
         }

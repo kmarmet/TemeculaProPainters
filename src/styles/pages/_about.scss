@@ -2,8 +2,20 @@
 .subpage {
   &.about {
     .about-text {
+      padding-bottom: 0;
       p {
         text-align: left;
+      }
+    }
+    .paint-preference {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 20px;
+      p {
+        opacity: .5;
+        padding: 1rem;
+        font-size: 14px;
+        text-align: center;
       }
     }
 
@@ -19,6 +31,13 @@
       background-repeat: no-repeat;
       h2 {
         color: white;
+        font-size: 70px;
+        @media (max-width: 768px) {
+            font-size: 50px;
+        }
+        @media (max-width: 600px) {
+            font-size: 40px;
+        }
       }
       ul {
         li {

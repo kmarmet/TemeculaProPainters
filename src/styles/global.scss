@@ -225,3 +225,7 @@ button {
 .text-shadow {
   @include TextShadow;
 }
+
+.subtitle {
+  line-height: 1.4;
+}
