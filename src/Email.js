@@ -3,7 +3,8 @@ import emailjs from '@emailjs/browser';
 const EmailJs = {
     userId: "user_xkyvL3Rusz36TS0ctjfU9",
     services: {
-        CompanyEmail: "CompanyEmail"
+        CompanyEmail: "CompanyEmail",
+        Gmail: "Gmail"
     },
     templates: {
         ContactForm: "ContactForm",
